@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title> Pink Carrots Budgeter  </title>
+    <link rel="stylesheet" href = "styleHomePage.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <section class = "header">
+
+
+    <nav>
+        <a href = "HomePage.html"><img src="Images/CarrotMascot .png"></a>
+        <img src="Images/ProjectName.png"></a>
+        <div class ="nav-links" id="navLinks">
+            <i class="fa fa-window-close"></i>
+            <i class="fa fa-bars" onclick="hideMenu()"></i>
+
+            <ul>
+                <li><a href = "" >HOME</a></li>
+                <li><a href = "" >CHOP CARROTS</a></li>
+                <li><a href = "recipe.html" >SHOP CARROTS</a></li>
+                <li><a href = "" >CONTACT</a></li>
+            </ul>
+
+        </div>
+
+         <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+<div class="text-box">
+    <h1>
+        What do we do? 
+    </h1>
+
+    <p>
+       Help you find recipes catered to your dietary & budgetting needs!
+    </p>
+    <p>
+        Help you easily learn new recipes and techniques through cooking games
+    </p>
+
+</div>
+
+ <div class="buttons-home">
+    <a href="" class="chop-btn">Chop Carrots: Learn to Cook! </a>
+    <a href="" class="shop-btn">Shop Carrots: Find recipes! </a>
+</div>
+
+<!-----About ------>
+<body>
+
+    <section class = "about">
+ 
+           <div class = "about-col">
+    <img src="Images/AboutInfo.png"></img>
+
+     </div>
+
+
+    
+    </section>
+
+
+<!------ JavaScript for Toggle ------>
+    </section>
+
+
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+    </script>
+
+
+
+</body>
+
+
+</html>
