@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe</title>
+    <link rel="stylesheet" href = "styleHomePage.css">
+</head>
+<body>
+    <section class = "header">
+        <nav>
+            <a href = "HomePage.html"><img src="https://static.vecteezy.com/system/resources/previews/036/176/347/non_2x/carrot-logo-design-with-simple-creative-concept-vector.jpg" alt = ""></a>
+            <div class ="nav-links">
+                <ul>
+                    <li><a href = "home.html" >HOME</a></li>
+                    <li><a href = "recipe.html" >CHOP CARROTS</a></li>
+                    <li><a href = "game.html" >GET CARROTS</a></li>
+                    <li><a href = "" >CONTACT</a></li>
+                </ul>
+
+            </div>
+        </nav>
+    </section>
+
+    <section>
+        <p>How are you? </p>
+        <textarea style="background-color: aqua;"></textarea>
+
+        <!-- Allergy selector: multi-select with groups + "Other" text field -->
+        <label for="allergies">Select your allergies:</label>
+        <select id="allergies" name="allergies[]" multiple size="12" style="min-width: 250px;">
+        <option value="milk">Milk</option>
+        <option value="eggs">Eggs</option>
+        <option value="peanuts">Peanuts</option>
+        <option value="tree_nuts">Tree Nuts (e.g. walnuts, almonds)</option>
+        <option value="fish">Fish</option>
+        <option value="crustacean_shellfish">Crustacean Shellfish (shrimp, crab, etc.)</option>
+        <option value="soy">Soy</option>
+        <option value="wheat">Wheat</option>
+        <option value="gluten">Gluten</option>
+        <option value="sesame">Sesame</option>
+        <option value="mustard">Mustard</option>
+        <option value="sulfites">Sulfites</option>
+        <option value="celery">Celery</option>
+        <option value="corn">Corn</option>
+        <option value="chocolate">Chocolate</option>
+        <option value="fruits">Specific Fruits (e.g. kiwi, banana)</option>
+        <option value="lactose_intolerance">Lactose Intolerance</option>
+        <option value="pollen">Pollen</option>
+        <option value="dust_mites">Dust Mites</option>
+        <option value="mold">Mold</option>
+        <option value="animal_dander">Animal Dander</option>
+        <option value="insect_stings">Insect Stings (bee, wasp)</option>
+        <option value="latex">Latex</option>
+        <option value="penicillin">Penicillin</option>
+        <option value="sulfa">Sulfa Drugs</option>
+        <option value="aspirin">Aspirin</option>
+        <option value="ibuprofen">Ibuprofen</option>
+        <option value="nickel">Nickel</option>
+        <option value="cosmetics">Cosmetics</option>
+        <option value="fragrance">Fragrance</option>
+        <option value="rubber">Rubber</option>
+        <option value="cleaning_products">Cleaning Products</option>
+        <option value="other">Other (please specify below)</option>
+        <option value="none">No Known Allergies</option>
+        </select>
+
+        <!-- Optional: "Other" input appears only if 'Other' is selected -->
+        <div id="other-allergy-wrap" style="margin-top: 0.5rem; display: none;">
+        <label for="other-allergy">Other allergy:</label>
+        <input id="other-allergy" name="other_allergy" type="text" placeholder="Specify other allergy" style="width: 100%; max-width: 300px;" />
+        </div>
+
+        <script>
+        const select = document.getElementById('allergies');
+        const otherWrap = document.getElementById('other-allergy-wrap');
+        const otherInput = document.getElementById('other-allergy');
+
+        select.addEventListener('change', () => {
+            const selected = Array.from(select.selectedOptions).map(o => o.value);
+            if (selected.includes('other')) {
+            otherWrap.style.display = 'block';
+            } else {
+            otherWrap.style.display = 'none';
+            otherInput.value = '';
+            }
+        });
+        </script>
+    </section>
+</body>
+</html>
