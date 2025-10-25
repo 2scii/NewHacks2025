@@ -4,9 +4,9 @@
 }
 
 .header{
-    min-height: 100vh;
+    /* min-height: 100vh; */
     width: 100%;
-    background:linear-gradient(#daebcd);
+    /* background:linear-gradient(#daebcd); */
     
     /*linear-*/
     /*gradient(rgba(4,9,30,0,7), rgba(255, 184, 227, 0.7)), url(image);*/
@@ -50,4 +50,8 @@ nav img{
     text-decoration: none;
     font-size: 30px;
 
+}
+
+body {
+    background:linear-gradient(#daebcd);
 }
