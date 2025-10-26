@@ -1,26 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe</title>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title> Pink Carrots Budgeter  </title>
     <link rel="stylesheet" href = "styleHomePage.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
+
 <body>
     <section class = "header">
-        <nav>
-            <a href = "HomePage.html"><img src="https://static.vecteezy.com/system/resources/previews/036/176/347/non_2x/carrot-logo-design-with-simple-creative-concept-vector.jpg" alt = ""></a>
-            <div class ="nav-links">
-                <ul>
-                    <li><a href = "home.html" >HOME</a></li>
-                    <li><a href = "recipe.html" >CHOP CARROTS</a></li>
-                    <li><a href = "game.html" >GET CARROTS</a></li>
-                    <li><a href = "" >CONTACT</a></li>
-                </ul>
 
-            </div>
-        </nav>
-    </section>
+
+    <nav>
+        <a href = "HomePage.html"><img src="Images/CarrotMascot .png"></a>
+        <img src="Images/ProjectName.png"></a>
+        <div class ="nav-links" id="navLinks">
+            <i class="fa fa-window-close"></i>
+            <i class="fa fa-bars" onclick="hideMenu()"></i>
+
+            <ul>
+                <li><a href = "" >HOME</a></li>
+                <li><a href = "" >CHOP CARROTS</a></li>
+                <li><a href = "recipe.html" >SHOP CARROTS</a></li>
+                <li><a href = "" >CONTACT</a></li>
+            </ul>
+
+        </div>
+
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
 
 <link rel="stylesheet" href = "styleRecipe.css">
 
@@ -73,7 +84,7 @@
   <input type="checkbox" name="time" value="11 hours">
     11 hours
   </label><br>
-  <input type="checkbox" name="time" value="12 hours">
+  <input type="checkbox" name="time" value="12+ hours">
     12 hours
   </label><br>
 
@@ -82,8 +93,79 @@
     <label>
  
     <div class="form-group">
-  <label  for="comments" style="font-family: Tahoma; margin-top: 20px;font-weight: bold; color: #333;">Other details:</label><br>
-  <textarea id="comments" name="comments" rows="15" cols="35" placeholder="Write your thoughts here..." style="
+  <label  for="comments" style="font-family: Tahoma; margin-top: 20px;font-weight: bold; color: rgb(227, 74, 143);">Addtional information:</label><br>
+  <textarea id="comments" name="comments" rows="15" cols="35" placeholder="Note down any additional information here:" style="
+      font-family: Arial;
+      font-size: 14px;
+      padding: 10px;
+      border: 2px solid #e34a8f;
+      border-radius: 8px;
+      resize: vertical;
+      margin-top: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    "></textarea>
+</div>
+
+ </div>
+=
+</section>
+<br>
+<br>
+
+<section >
+
+<p  style="text-align: center;
+    font-family: 'Tahoma';
+    color: #fabcb9
+;
+    font-weight: bold;
+    -webkit-text-stroke: 2px oklch(64.056% 0.19797 356.504);
+    text-decoration: none;
+    font-size: 30px;
+">What do you currently have in stock?</p><br>
+<div class="container">
+<form class="checkbox-list">
+    <input type="checkbox" name="time" value="rice">
+    Rice
+  </label><br>
+  <input type="checkbox" name="time" value="pasta">
+    Pasta
+  </label><br>
+  <input type="checkbox" name="time" value="Eggs">
+    Eggs
+  </label><br>
+  <input type="checkbox" name="time" value="Milk">
+    Milk
+  </label><br>
+  <input type="checkbox" name="time" value="Cheese">
+   Cheese
+  </label><br>
+  <input type="checkbox" name="time" value="beef">
+    Beef
+  </label><br>
+  <input type="checkbox" name="time" value="soup or broth">
+    Soup or Broth
+  </label><br>
+  <input type="checkbox" name="time" value="oats">
+    oats
+  </label><br>
+  <input type="checkbox" name="time" value="Canned beans">
+    Canned Beans
+  </label><br>
+  <input type="checkbox" name="time" value="garlic">
+    Garlic
+  </label><br>
+  <input type="checkbox" name="time" value="Flour">
+    Flour
+  </label><br>
+
+
+  </form>
+    <label>
+ 
+    <div class="form-group">
+  <label  for="comments" style="font-family: Tahoma; margin-top: 20px;font-weight: bold; color: rgb(227, 74, 143);">Addtional stock:</label><br>
+  <textarea id="comments" name="comments" rows="15" cols="35" placeholder="List any other food items you have at home..." style="
       font-family: Arial;
       font-size: 14px;
       padding: 10px;
@@ -95,386 +177,291 @@
     "></textarea>
 </div>
  </div>
-
-
-
+ 
 </section>
+<br>
+<br>
 
-
-<section>
-<p style="
+<section >
+<p  style="text-align: center;
     font-family: 'Tahoma';
-    color:#fabcb9
+    color: #fabcb9
 ;
     font-weight: bold;
-    -webkit-text-stroke: 2px rgb(227, 74, 143);
+    -webkit-text-stroke: 2px oklch(64.056% 0.19797 356.504);
     text-decoration: none;
-    font-size: 20px;
-">How much time do you have this week to meal prep?</p>
+    font-size: 30px;
+">How many days do you want to meal plan for?</p><br>
 <div class="container">
+<form class="checkbox-list">
+    <input type="checkbox" name="time" value="1 day">
+    1 day
+  </label><br>
+  <input type="checkbox" name="time" value="2 days">
+    2 days
+  </label><br>
+  <input type="checkbox" name="time" value="3 days">
+    3 days
+  </label><br>
+  <input type="checkbox" name="time" value="4 days">
+    4 days
+  </label><br>
+  <input type="checkbox" name="time" value="5 days">
+   6 days
+  </label><br>
+  <input type="checkbox" name="time" value="7 days">
+    7 days
+  </label><br>
+  <input type="checkbox" name="time" value="8 days">
+    8 days
+  </label><br>
+  <input type="checkbox" name="time" value="9 days">
+    9 days
+  </label><br>
+  <input type="checkbox" name="time" value="10 days">
+    10 days
+  </label><br>
+  <input type="checkbox" name="time" value="11 day"s>
+    11 days
+  </label><br>
+  <input type="checkbox" name="time" value="12+ days">
+    12+ days
+  </label><br>
 
-        <!-- Time selector: multi-select with groups + "Other" text field -->
-        <label for=""></label>
-        <select id="" name="time[]" multiple size="6" style="min-width: 250px;">
-        <option value="1 hour">1 hour</option>
-        <option value="2 hours">2 hours</option>
-        <option value="3 hour">3 hour</option>
-        <option value="4 hours">4 hours</option>
-        <option value="5 hour">5 hour</option>
-        <option value="6 hours">6 hours</option>
-        <option value="7 hour">7 hour</option>
-        <option value="8 hours">8 hours</option>
-        <option value="9 hour">9 hour</option>
-        <option value="10 hours">10 hours</option>
-        <option value="12 hour">11 hour</option>
-        <option value="12 hours">12 hours</option>
 
-         <!-- Optional: "Other" input appears only if 'Other' is selected -->
-        <div id="other-time-wrap" style="margin-top: 0.5rem; display: none;">
-        <label for="other-time">Other times:</label>
-        <input id="other-time" name="time" type="text" placeholder="Specify other time options" style="width: 100%; max-width: 300px;" />
-        </div>
+  </form>
+    <label>
+ 
+    <div class="form-group">
+  <label  for="comments" style="font-family: Tahoma; margin-top: 20px;font-weight: bold; color: rgb(227, 74, 143);">Other details:</label><br>
+  <textarea id="comments" name="comments" rows="15" cols="35" placeholder="Note down any additional information here:" style="
+      font-family: Arial;
+      font-size: 14px;
+      padding: 10px;
+      border: 2px solid #e34a8f;
+      border-radius: 8px;
+      resize: vertical;
+      margin-top: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    "></textarea>
 </div>
+ </div>
+</section>
+<br>
+<br>
+
+<section >
+<p  style="text-align: center;
+    font-family: 'Tahoma';
+    color: #fabcb9
+;
+    font-weight: bold;
+    -webkit-text-stroke: 2px oklch(64.056% 0.19797 356.504);
+    text-decoration: none;
+    font-size: 30px;
+">How much is your budget?</p><br>
+<div class="container">
+<form class="checkbox-list">
+    <input type="checkbox" name="time" value="0-$10">
+  $0-$10
+  </label><br>
+  <input type="checkbox" name="time" value="$11-$20">
+   $11-$20
+  </label><br>
+  <input type="checkbox" name="time" value="$21-$30">
+   $21-$30
+  </label><br>
+  <input type="checkbox" name="time" value="$31-$40">
+    $31-$40
+  </label><br>
+  <input type="checkbox" name="time" value="$41-$50">
+$41-$50
+  </label><br>
+  <input type="checkbox" name="time" value="$51-$60">
+    $51-$60"
+  </label><br>
+  <input type="checkbox" name="time" value="$61-$70">
+  $61-$70
+  </label><br>
+  <input type="checkbox" name="time" value="$71-$80">
+   $71-$80
+  </label><br>
+  <input type="checkbox" name="time" value="$81-$90">
+  $81-$90
+  </label><br>
+  <input type="checkbox" name="time" value="$91-$100">
+    $91-$100"
+  </label><br>
+  <input type="checkbox" name="time" value="$100+">
+    $100+
+  </label><br>
+
+
+  </form>
+    <label>
+ 
+    <div class="form-group">
+  <label  for="comments" style="font-family: Tahoma; margin-top: 20px;font-weight: bold; color: rgb(227, 74, 143);">Other details:</label><br>
+  <textarea id="comments" name="comments" rows="15" cols="35" placeholder="Note down any additional information here:" style="
+      font-family: Arial;
+      font-size: 14px;
+      padding: 10px;
+      border: 2px solid #e34a8f;
+      border-radius: 8px;
+      resize: vertical;
+      margin-top: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    "></textarea>
+</div>
+ </div>
+</section>
+<br>
+<br>
+
+
+
+<section >
+<p  style="text-align: center;
+    font-family: 'Tahoma';
+    color: #fabcb9
+;
+    font-weight: bold;
+    -webkit-text-stroke: 2px oklch(64.056% 0.19797 356.504);
+    text-decoration: none;
+    font-size: 30px;
+">What are your food preferences?</p><br>
+<div class="container">
+<form class="checkbox-list">
+    <input type="checkbox" name="time" value="Chicken breast">
+   Chicken breast
+  </label><br>
+  <input type="checkbox" name="time" value="Eggs">
+    Eggs
+  </label><br>
+  <input type="checkbox" name="time" value="Salmon">
+   Salmon
+  </label><br>
+  <input type="checkbox" name="time" value="Bacon">
+   Bacon
+  </label><br>
+  <input type="checkbox" name="time" value=" Cheese">
+  Cheese
+  </label><br>
+  <input type="checkbox" name="time" value="Bread">
+    Bread
+  </label><br>
+  <input type="checkbox" name="time" value="Tomatoes">
+  Tomatoes
+  </label><br>
+  <input type="checkbox" name="time" value="Lettuce">
+   Lettuce
+  </label><br>
+  <input type="checkbox" name="time" value="Strawberries">
+   Strawberries
+  </label><br>
+  <input type="checkbox" name="time" value="Avocado">
+   Avocado
+  </label><br>
+  <input type="checkbox" name="time" value="Garlic">
+    Garlic
+  </label><br>
+
+
+  </form>
+    <label>
+ 
+    <div class="form-group">
+  <label  for="comments" style="font-family: Tahoma; margin-top: 20px;font-weight: bold; color: rgb(227, 74, 143);">Other details:</label><br>
+  <textarea id="comments" name="comments" rows="15" cols="35" placeholder="Note down any additional perferences here:" style="
+      font-family: Arial;
+      font-size: 14px;
+      padding: 10px;
+      border: 2px solid #e34a8f;
+      border-radius: 8px;
+      resize: vertical;
+      margin-top: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    "></textarea>
+</div>
+ </div>
 </section>
 
+<br>
+<br>
 
-<section>
-<p style="
+
+
+<section >
+<p  style="text-align: center;
     font-family: 'Tahoma';
-    color: #f59ee9;
+    color: #fabcb9
+;
     font-weight: bold;
-    -webkit-text-stroke: 2px rgb(227, 74, 143);
+    -webkit-text-stroke: 2px oklch(64.056% 0.19797 356.504);
     text-decoration: none;
-    font-size: 20px;
-">What do you currently have in stock</p>
-        <textarea style="background-color: aqua;"></textarea>
-
-        <!-- Time selector: multi-select with groups + "Other" text field -->
-        <label for="time"></label>
-        <select id="time" name="time[]" multiple size="6" style="min-width: 250px;">
-        <option value="1 hour">1 hour</option>
-        <option value="2 hours">2 hours</option>
-        <option value="3 hour">3 hour</option>
-        <option value="4 hours">4 hours</option>
-        <option value="5 hour">5 hour</option>
-        <option value="6 hours">6 hours</option>
-        <option value="7 hour">7 hour</option>
-        <option value="8 hours">8 hours</option>
-        <option value="9 hour">9 hour</option>
-        <option value="10 hours">10 hours</option>
-        <option value="12 hour">11 hour</option>
-        <option value="12 hours">12 hours</option>
-
-         <!-- Optional: "Other" input appears only if 'Other' is selected -->
-        <div id="other-time-wrap" style="margin-top: 0.5rem; display: none;">
-        <label for="other-time">Other times:</label>
-        <input id="other-time" name="time" type="text" placeholder="Specify other time options" style="width: 100%; max-width: 300px;" />
-        </div>
-</section>
-
-<section>
-<p style="
-    font-family: 'Tahoma';
-    color: #f59ee9;
-    font-weight: bold;
-    -webkit-text-stroke: 2px rgb(227, 74, 143);
-    text-decoration: none;
-    font-size: 20px;
-">How many days do you want to meal plan for?</p>
-        <textarea style="background-color: aqua;"></textarea>
-
-        <!-- days selector: multi-select with groups + "Other" text field -->
-        <label for="days"></label>
-        <select id="days" name="days[]" multiple size="6" style="min-width: 250px;">
-        <option value="1 days">1 days</option>
-        <option value="2 days">2 days</option>
-        <option value="3 days">3 days</option>
-        <option value="4 days">4 days</option>
-        <option value="5 days">5 days</option>
-        <option value="6 days">6 days</option>
-        <option value="7 days">7 days</option>
-        <option value="8 days">8 days</option>
-        <option value="9 days">9 days</option>
-        <option value="10 days">10 days</option>
-        <option value="12 days">12 days</option>
-
-         <!-- Optional: "Other" input appears only if 'Other' is selected -->
-        <div id="other-days-wrap" style="margin-top: 0.5rem; display: none;">
-        <label for="other-days">Other times:</label>
-        <input id="other-days" name="days" type="text" placeholder="Specify how many days" style="width: 100%; max-width: 300px;" />
-        </div>
-</section>
-
-<section class = "question">
-<p style="
-    font-family: 'Tahoma';
-    color: #f59ee9;
-    font-weight: bold;
-    -webkit-text-stroke: 2px rgb(227, 74, 143);
-    text-decoration: none;
-    font-size: 20px;
-">How much is your budget?</p>
-        <textarea style="background-color: aqua;"></textarea>
-
-        <!-- Budget selector: multi-select with groups + "Other" text field -->
-        <label for="Budget"></label>
-        <select id="Budget" name="Budget[]" multiple size="6" style="min-width: 250px;">
-        <option value="$10">$10</option>
-        <option value="$20">$20</option>
-        <option value="$30">$30</option>
-        <option value="$40">$40"</option>
-        <option value="$50">$50</option>
-        <option value="$60">$60</option>
-        <option value="$70">$70</option>
-        <option value="$80">$80</option>
-        <option value="$90">$90</option>
-        <option value="$100">$100</option>
-        <option value="$110">$110</option>
-        <option value="$120">$120</option>
-
-         <!-- Optional: "Other" input appears only if 'Other' is selected -->
-        <div id="other-Budget-wrap" style="margin-top: 0.5rem; display: none;">
-        <label for="other-Budget">Other times:</label>
-        <input id="other-Budget" name="Budget" type="text" placeholder="Specify your budget" style="width: 100%; max-width: 300px;" />
-        </div>
-</section>
-
-<p style="font-size: 30px;">User Information</p>
-
-<div class="section">
-<section>
-        <p style="
-    font-family: 'Tahoma';
-    color: #f59ee9;
-    font-weight: bold;
-    -webkit-text-stroke: 2px rgb(227, 74, 143);
-    text-decoration: none;
-    font-size: 20px;
-">Select your allergies:</p>
-
-        <textarea style="background-color: aqua;"></textarea>
-
-        <!-- Allergy selector: multi-select with groups + "Other" text field -->
-        <label for="allergies"></label>
-        <select id="allergies" name="allergies[]" multiple size="6" style="min-width: 250px;">
-        <option value="milk">Milk</option>
-        <option value="eggs">Eggs</option>
-        <option value="peanuts">Peanuts</option>
-        <option value="tree_nuts">Tree Nuts (e.g. walnuts, almonds)</option>
-        <option value="fish">Fish</option>
-        <option value="crustacean_shellfish">Crustacean Shellfish (shrimp, crab, etc.)</option>
-        <option value="soy">Soy</option>
-        <option value="wheat">Wheat</option>
-        <option value="gluten">Gluten</option>
-        <option value="sesame">Sesame</option>
-        <option value="mustard">Mustard</option>
-        <option value="sulfites">Sulfites</option>
-        <option value="celery">Celery</option>
-        <option value="corn">Corn</option>
-        <option value="chocolate">Chocolate</option>
-        <option value="fruits">Specific Fruits (e.g. kiwi, banana)</option>
-        <option value="lactose_intolerance">Lactose Intolerance</option>
-        <option value="pollen">Pollen</option>
-        <option value="dust_mites">Dust Mites</option>
-        <option value="mold">Mold</option>
-        <option value="animal_dander">Animal Dander</option>
-        <option value="insect_stings">Insect Stings (bee, wasp)</option>
-        <option value="latex">Latex</option>
-        <option value="penicillin">Penicillin</option>
-        <option value="sulfa">Sulfa Drugs</option>
-        <option value="aspirin">Aspirin</option>
-        <option value="ibuprofen">Ibuprofen</option>
-        <option value="nickel">Nickel</option>
-        <option value="cosmetics">Cosmetics</option>
-        <option value="fragrance">Fragrance</option>
-        <option value="rubber">Rubber</option>
-        <option value="cleaning_products">Cleaning Products</option>
-        <option value="other">Other (please specify below)</option>
-        <option value="none">No Known Allergies</option>
-        </select>
-
-        <!-- Optional: "Other" input appears only if 'Other' is selected -->
-        <div id="other-allergy-wrap" style="margin-top: 0.5rem; display: none;">
-        <label for="other-allergy">Other allergy:</label>
-        <input id="other-allergy" name="other_allergy" type="text" placeholder="Specify other allergy" style="width: 100%; max-width: 300px;" />
-        </div>
-
-        <script>
-        const select = document.getElementById('allergies');
-        const otherWrap = document.getElementById('other-allergy-wrap');
-        const otherInput = document.getElementById('other-allergy');
-
-        select.addEventListener('change', () => {
-            const selected = Array.from(select.selectedOptions).map(o => o.value);
-            if (selected.includes('other')) {
-            otherWrap.style.display = 'block';
-            } else {
-            otherWrap.style.display = 'none';
-            otherInput.value = '';
-            }
-        });
-        </script>
-
-    </section>
-     </div>
+    font-size: 30px;
+">What do you ALWAYS have in stock?</p><br>
+<div class="container">
+<form class="checkbox-list">
+    <input type="checkbox" name="time" value="pasta">
+pasta
+  </label><br>
+  <input type="checkbox" name="time" value="Eggs">
+    Eggs
+  </label><br>
+  <input type="checkbox" name="time" value="rice">
+   rice
+  </label><br>
+  <input type="checkbox" name="time" value="salt">
+   salt
+  </label><br>
+  <input type="checkbox" name="time" value=" Cheese">
+  Cheese
+  </label><br>
+  <input type="checkbox" name="time" value="Bread">
+    Bread
+  </label><br>
+  <input type="checkbox" name="time" value="Onions">
+  Onions
+  </label><br>
+  <input type="checkbox" name="time" value="Beans">
+Beans
+  </label><br>
+  <input type="checkbox" name="time" value="Butter">
+   Butter
+  </label><br>
+  <input type="checkbox" name="time" value="shrimp">
+   shrimp
+  </label><br>
+  <input type="checkbox" name="time" value="Chili flakes flakes">
+Chili flakes
+  </label><br>
 
 
-<p style="font-size: 20px;">Food Prefrences</p>
-
-<section>
-        <p style="
-    font-family: 'Tahoma';
-    color: #f59ee9;
-    font-weight: bold;
-    -webkit-text-stroke: 2px rgb(227, 74, 143);
-    text-decoration: none;
-    font-size: 20px;
-">What food preferences do you have for breakfast?</p>
-        <textarea style="background-color: aqua;"></textarea>
-
-        <!-- Breakfast selector: multi-select with groups + "Other" text field -->
-        <label for="breakfast"></label>
-        <select id="breakfast" name="breakfast[]" multiple size="6" style="min-width: 250px;">
-        <option value="Overnight oats">Overnight oats</option>
-        <option value="Egg sandwich">Egg sandwich</option>
-        <option value="Greek yogurt bowl">Greek yogurt bowl</option>
-        <option value="Smoothie">Smoothie</option>
-        <option value="Scramble eggs">Scramble eggs</option>
-        <option value="Smoothie">Smoothie</option>
-        <option value="Pancakes ">Pancakes</option>
-        
-         <!-- Optional: "Other" input appears only if 'Other' is selected -->
-        <div id="other-breakfast-wrap" style="margin-top: 0.5rem; display: none;">
-        <label for="other-breakfast">Other times:</label>
-        <input id="other-breakfast" name="time" type="text" placeholder="Specify other breakfast perferences" style="width: 100%; max-width: 300px;" />
-        </div>
-</section>
-
-<section class = "question">
-<section>
-        <p style="
-    font-family: 'Tahoma';
-    color: #f59ee9;
-    font-weight: bold;
-    -webkit-text-stroke: 2px rgb(227, 74, 143);
-    text-decoration: none;
-    font-size: 20px;
-">What food preferences do you have for lunch/dinner?</p>
-        <textarea style="background-color: aqua;"></textarea>
-
-        <!-- Lunch/dinner selector: multi-select with groups + "Other" text field -->
-        <label for="lunch/dinner"></label>
-        <select id="lunch/dinner" name="lunch[]" multiple size="6" style="min-width: 250px;">
-        <option value="One-pot pasta">One-pot pasta</option>
-        <option value="Fried rice">Fried rice</option>
-        <option value="Tacos or wraps">Tacos or wraps</option>
-        <option value="Stir-fry noodles">Stir-fry noodles</option>
-        <option value="Quesadillas">Quesadillas</option>
-        <option value="Curry with rice">Curry with rice</option>
-        <option value="Sheet-pan meal">Sheet-pan meal</option>
-        
-         <!-- Optional: "Other" input appears only if 'Other' is selected -->
-        <div id="other-lunch/dinner-wrap" style="margin-top: 0.5rem; display: none;">
-        <label for="other-lunch/dinner">Other times:</label>
-        <input id="other-lunch/dinner" name="time" type="text" placeholder="Specify other lunch/dinner preferences" style="width: 100%; max-width: 300px;" />
-        </div>
-
+  </form>
+    <label>
+ 
+    <div class="form-group">
+  <label  for="comments" style="font-family: Tahoma; margin-top: 20px;font-weight: bold; color: rgb(227, 74, 143);">Other details:</label><br>
+  <textarea id="comments" name="comments" rows="15" cols="35" placeholder="Note down any additional stock here:" style="
+      font-family: Arial;
+      font-size: 14px;
+      padding: 10px;
+      border: 2px solid #e34a8f;
+      border-radius: 8px;
+      resize: vertical;
+      margin-top: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    "></textarea>
+</div>
+ </div>
 </section>
 
 <section>
-<p
- style="
-    font-family: 'Tahoma';
-    color: #f59ee9;
-    font-weight: bold;
-    -webkit-text-stroke: 2px rgb(227, 74, 143);
-    text-decoration: none;
-    font-size: 20px;
-">What food preferences do you have for snacks?</p>
-        <textarea style="background-color: aqua;"></textarea>
-
-        <!-- Snacks selector: multi-select with groups + "Other" text field -->
-        <label for="snack"></label>
-        <select id="snack" name="snack[]" multiple size="6" style="min-width: 250px;">
-        <option value="Berry and fruit">Berry and fruits</option>
-        <option value="Peanut butter energy bites">Peanut butter energy bites</option>
-        <option value="Veggie Snacks">Veggie Snacks</option>
-        <option value="Mini wrap">Mini wrap</option>
-        <option value="granola bar">granola bars</option>
-        <option value="Apple chips"> Apple chips</option>
-        <option value="Pancakes ">N/A</option>
-        
-         <!-- Optional: "Other" input appears only if 'Other' is selected -->
-        <div id="other-snack-wrap" style="margin-top: 0.5rem; display: none;">
-        <label for="other-snack">Other times:</label>
-        <input id="other-snack" name="time" type="text" placeholder="Specify other snacks perferences" style="width: 100%; max-width: 300px;" />
-        </div>
+<form action="submit_page.html" method="post">
+  <button type="submit">Submit</button>
+</form>
 </section>
-
-<section>
-<p style="
-    font-family: 'Tahoma';
-    color: #f59ee9;
-    font-weight: bold;
-    -webkit-text-stroke: 2px rgb(227, 74, 143);
-    text-decoration: none;
-    font-size: 20px;
-">What foods do you dislike?</p>
-        <textarea style="background-color: aqua;"></textarea>
-
-        <!-- Dislike selector: multi-select with groups + "Other" text field -->
-        <label for="dislike"></label>
-        <select id="dislike" name="dislike[]" multiple size="6" style="min-width: 250px;">
-        <option value="Brussels sprouts">Brussels sprouts</option>
-        <option value="Broccoli">Broccoli</option>
-        <option value="Beets">Beets</option>
-        <option value="Anchovies">Anchovies</option>
-        <option value="Sardines">Sardines</option>
-        <option value="Tuna">Tuna</option>
-        <option value="Pancakes ">N/A</option>
-        
-         <!-- Optional: "Other" input appears only if 'Other' is selected -->
-        <div id="other-dislike-wrap" style="margin-top: 0.5rem; display: none;">
-        <label for="other-dislike">Other times:</label>
-        <input id="other-dislike" name="time" type="text" placeholder="Specify other foods you dislike" style="width: 100%; max-width: 300px;" />
-        </div>
-</section>
-
-<section>
-<p style="
-    font-family: 'Tahoma';
-    color: #f59ee9;
-    font-weight: bold;
-    -webkit-text-stroke: 2px rgb(227, 74, 143);
-    text-decoration: none;
-    font-size: 20px;
-">What do you always have in stock?</p>
-        <textarea style="background-color: aqua;"></textarea>
-
-        <!-- Stock selector: multi-select with groups + "Other" text field -->
-        <label for="stock"></label>
-        <select id="stock" name="stock[]" multiple size="6" style="min-width: 250px;">
-        <option value="Bread">Bread</option>
-        <option value="Rice">Rice</option>
-        <option value="Pasta">Pasta</option>
-        <option value="Oats">Oats</option>
-        <option value="Canned beans">Canned beans</option>
-        <option value="Soup or broth">Soup or broth</option>
-        <option value="Milk">Milk</option>
-        <option value="Eggs">Eggs</option>
-        <option value="Salt">Salt</option>
-        <option value="pepper">pepper</option>
-        <option value="lemon">lemon</option>
-        <option value="garlic">garlic</option>
-
-         <!-- Optional: "Other" input appears only if 'Other' is selected -->
-        <div id="other-stock-wrap" style="margin-top: 0.5rem; display: none;">
-        <label for="other-stock">Other stock:</label>
-        <input id="other-stock" name="stock" type="text" placeholder="Specify other stock options" style="width: 100%; max-width: 300px;" />
-        </div>
-
-</section>
-
 
 </body>
 </html>
