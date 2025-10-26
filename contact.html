@@ -3,9 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Contacts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styleHomePage.css">
 </head>
+
 <body>
-    
+    <section id="header">
+        <nav>
+            <img src="Images/CarrotMascot .png" alt="Carrot Mascot">
+            <img src="Images/ProjectName.png" alt="Project Name">
+
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="game.html">CHOP CARROTS</a></li>
+                    <li><a href="recipe.html">SHOP CARROTS</a></li>
+                    <li><a href="contact.html" class="active">CONTACT</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+    <div class="contact-section">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, suggestions, or feedback, feel free to reach out to us!</p>
+        <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
 </body>
+
+<style>
+    .contact-section {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fabcb9;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-section h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .contact-section form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-section label {
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .contact-section input,
+    .contact-section textarea {
+        margin-bottom: 15px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+
+    .contact-section button {
+        padding: 10px;
+        background-color: #fabcb9;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .contact-section button:hover {
+        background-color: #e34a8f;
+    }
+
+    @media (max-width: 600px) {
+        .contact-section {
+            margin: 20px;
+            padding: 15px;
+        }
+    }
+</style>
 </html>

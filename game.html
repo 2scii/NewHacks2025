@@ -1,29 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game</title>
-    <link rel="stylesheet" href = "styleHomePage.css">
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity Web Player | Chop Carrots!</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
-</head>
-
-    <nav>
-        <a href = "index.html"><img src="Images/CarrotMascot.png" alt = ""></a>
-        <div class ="nav-links">
-            <ul>
-                <li><a href = "index.html" >HOME</a></li>
-                <li><a href = "game.html" class = "active">CHOP CARROTS</a></li>
-                <li><a href = "recipe.html" >SHOP CARROTS</a></li>
-                <li><a href = "contact.html" >CONTACT</a></li>
-            </ul>
-
-        </div>
-    </nav>
-    <body>
-<div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
+  </head>
+  <body>
+    <div id="unity-container" class="unity-desktop">
+      <canvas id="unity-canvas" width=1280 height=600 tabindex="-1"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -34,12 +20,15 @@
       <div id="unity-footer">
         <div id="unity-logo-title-footer"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">My project</div>
+        <div id="unity-build-title">Chop Carrots!</div>
       </div>
     </div>
+    <button onclick="redirect()">Back to Home Page</button>
     <script>
       var canvas = document.querySelector("#unity-canvas");
-
+      function redirect(){
+        window.location.href = "index.html";
+      }
       // Shows a temporary message banner/ribbon for a few seconds, or
       // a permanent error message on top of the canvas if type=='error'.
       // If type=='warning', a yellow highlight color is used.
@@ -66,15 +55,15 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/New folder (2).loader.js";
+      var loaderUrl = buildUrl + "/GameExport.loader.js";
       var config = {
         arguments: [],
-        dataUrl: buildUrl + "/New folder (2).data.unityweb",
-        frameworkUrl: buildUrl + "/New folder (2).framework.js.unityweb",
-        codeUrl: buildUrl + "/New folder (2).wasm.unityweb",
+        dataUrl: buildUrl + "/GameExport.data.unityweb",
+        frameworkUrl: buildUrl + "/GameExport.framework.js.unityweb",
+        codeUrl: buildUrl + "/GameExport.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
-        productName: "My project",
+        productName: "Chop Carrots!",
         productVersion: "1.0",
         showBanner: unityShowBanner,
         // errorHandler: function(err, url, line) {
@@ -118,7 +107,7 @@
 
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-        canvas.style.width = "960px";
+        canvas.style.width = "1280px";
         canvas.style.height = "600px";
       }
 
@@ -143,8 +132,5 @@
       document.body.appendChild(script);
 
     </script>
-
-<body>
-    
-</body>
+  </body>
 </html>

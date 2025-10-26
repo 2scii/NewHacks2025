@@ -3,50 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href = "styleHomePage.css">
-    
-    <title>Recipes</title>
+    <title>Recipes | Carrot Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styleHomePage.css">
+
+    <style>
+        /* Extra styling specific to recipe page */
+
+        #main-content {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        #recipe-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin: 40px auto;
+            max-width: 1200px;
+        }
+
+        .recipe-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            width: 260px;
+            text-align: center;
+            padding: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .recipe-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+        }
+
+        .recipe-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .recipe-card h3 {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        button {
+            background-color: #ffd2d2;
+            color: #e247a8;
+            border: none;
+            padding: 20px 40px;
+            border-radius: 8px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        /* Responsive for smaller devices */
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .recipe-card {
+                width: 90%;
+            }
+
+            button {
+                width: 80%;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <section id="header">
         <nav>
-            <a href = "index.html"><img src="Images/CarrotMascot .png"></a>
-            <img src="Images/ProjectName.png"></a>
-            <div class ="nav-links" id="navLinks">
+            <img src="Images/CarrotMascot .png" alt="Carrot Mascot">
+            <img src="Images/ProjectName.png" alt="Project Name">
 
-                <i class="fa fa-window-close"></i>
-                <i class="fa fa-bars" onclick="hideMenu()"></i>
-
+            <div class="nav-links" id="navLinks">
                 <ul>
-                    <li><a href = "index.html" >HOME</a></li>
-                    <li><a href = "game.html" >CHOP CARROTS</a></li>
-                    <li><a href = "recipe.html">SHOP CARROTS</a></li>
-                    <li><a href = "contact.html" >CONTACT</a></li>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="game.html">CHOP CARROTS</a></li>
+                    <li><a href="recipe.html">SHOP CARROTS</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
                 </ul>
-
             </div>
-
-            <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
     </section>
-    <button onclick="loadData()">Load Random Recipe Data</button>
 
-</body>
+    <section id="main-content">
+        <button onclick="loadData()">Load Recipes</button>
 
-<script>
-    function loadData(){
-        var recipeData = {};
-        fetch('https://www.themealdb.com/api/json/v1/1/random.php')
-            .then(response => response.json())
-            .then(data => {
-                recipeData = data;
-                recipeData.meals.forEach(element => {
-                    console.log(element.strMealThumb);
+        <div id="recipe-container"></div>
+    </section>
+
+    <script>
+        function loadData() {
+            const container = document.getElementById('recipe-container');
+            container.innerHTML = ''; // clear previous content
+
+            // Fetch multiple random recipes (for example, 6)
+            const numRecipes = 6;
+            const fetches = [];
+
+            for (let i = 0; i < numRecipes; i++) {
+                fetches.push(fetch('https://www.themealdb.com/api/json/v1/1/random.php').then(res => res.json()));
+            }
+
+            Promise.all(fetches)
+                .then(results => {
+                    results.forEach(data => {
+                        const meal = data.meals[0];
+
+                        // Create the card
+                        const card = document.createElement('div');
+                        card.classList.add('recipe-card');
+
+                        const img = document.createElement('img');
+                        img.src = meal.strMealThumb;
+                        img.alt = meal.strMeal;
+
+                        const title = document.createElement('h3');
+                        title.textContent = meal.strMeal;
+
+                        card.appendChild(img);
+                        card.appendChild(title);
+                        container.appendChild(card);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                    container.innerHTML = `<p style="color:red;">Erreur: couldn't load recipes 😢</p>`;
                 });
-            })
-            .catch(error => {
-                console.error('Error fetching data:', error);
-            });
-    }
-</script>
+        }
+    </script>
+</body>
 </html>

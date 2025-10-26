@@ -3,13 +3,6 @@
     padding: 0;
 }
 
-
-}
-
-
-
-
-
 .form-container {
 width: 500px;   /* or percentage, e.g. 80% */
 height: 300px; 
@@ -19,10 +12,6 @@ height: 300px;
     box-shadow: 0 4px 10px rgb(227, 74, 143); /* adds a light shadow */
     border: 3px solid #add8e6; /* light blue border */
 }
-
-
-
-
 
 .checkbox-list {
   font-family: 'Tahoma';
@@ -40,10 +29,6 @@ height: 270px;
   
 }
 
-
-
-
-
 .checkbox-list input[type="checkbox"] {
   accent-color: #82edd4; /* modern browsers */
   width: 18px;
@@ -51,14 +36,7 @@ height: 270px;
   margin-top: 3px;
   
 }
-</style>
-
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f8ff;
-    display: flex;
-    justify-content: center; /* center horizontally */
-    align-items: center;     /* center vertically */
     min-height: 100vh;
     padding: 30px;
 }
@@ -66,17 +44,6 @@ body {
 .container {
     display: flex;
     justify-content: space-evenly;
-    
-  
-}
-
-
-.heading {
-    font-family: 'Tahoma', sans-serif;
-    font-weight: bold;
-    color: rgb(227, 74, 143);
-    margin-bottom: 20px;
-    text-align: center;
 }
 
 
@@ -95,9 +62,7 @@ button {
 button:hover {
   background-color: #e247a8;
 }
-</style>
 
-<form action="submit_page.html" method="post">
-  <button type="submit">Submit</button>
-</form>
-
+#submit-section {
+  text-align: center;
+}
