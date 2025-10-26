@@ -21,7 +21,7 @@
             <ul>
                 <li><a href = "index.html" >HOME</a></li>
                 <li><a href = "game.html" >CHOP CARROTS</a></li>
-                <li><a href = "recipe.html" >SHOP CARROTS</a></li>
+                <li><a href = "recipe.html" class = "active">SHOP CARROTS</a></li>
                 <li><a href = "contact.html" >CONTACT</a></li>
             </ul>
 
@@ -56,21 +56,13 @@
     font-size: 30px;
 ">How much time do you have this week to meal prep?</p><br>
 <div class="container">
-<form class="checkbox-list">
-    <input type="checkbox" name="time" value="1 hour">
-    1 hour
-  </label><br>
-  <input type="checkbox" name="time" value="2 hours">
-    2 hours
-  </label><br>
-  <input type="checkbox" name="time" value="3 hour">
-    3 hour
-  </label><br>
-  <input type="checkbox" name="time" value="4 hours">
-    4 hours
-  </label><br>
-  <input type="checkbox" name="time" value="5 hours">
-   6 hours
+<!-- <form class="checkbox-list">
+
+<input type="checkbox" name="time" value="1 hour">1 hour<br>
+  <input type="checkbox" name="time" value="2 hours">2 hours<br>
+  <input type="checkbox" name="time" value="3 hours">3 hours<br>
+  <input type="checkbox" name="time" value="4 hours">4 hours<br>
+  <input type="checkbox" name="time" value="5 hours">5 hours
   </label><br>
   <input type="checkbox" name="time" value="7 hours">
     7 hours
@@ -90,12 +82,13 @@
   <input type="checkbox" name="time" value="12+ hours">
     12 hours
   </label><br>
+</form> -->
 
-
-  </form>
-    <label>
+<form class="checkbox-list">
+    <input type="text" name="prepTime"> hour(s)
+</form>
  
-    <div class="form-group">
+  <div class="form-group"> 
   <label  for="comments" style="font-family: Tahoma; margin-top: 20px;font-weight: bold; color: rgb(227, 74, 143);">Addtional information:</label><br>
   <textarea id="comments" name="comments" rows="15" cols="35" placeholder="Note down any additional information here:" style="
       font-family: Arial;
@@ -107,10 +100,8 @@
       margin-top: 20px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     "></textarea>
-</div>
+</div> 
 
- </div>
-=
 </section>
 <br>
 <br>
@@ -179,7 +170,6 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     "></textarea>
 </div>
- </div>
  
 </section>
 <br>
@@ -196,7 +186,7 @@
     font-size: 30px;
 ">How many days do you want to meal plan for?</p><br>
 <div class="container">
-<form class="checkbox-list">
+<!-- <form class="checkbox-list">
     <input type="checkbox" name="time" value="1 day">
     1 day
   </label><br>
@@ -232,10 +222,12 @@
   </label><br>
 
 
-  </form>
-    <label>
- 
-    <div class="form-group">
+  </form> -->
+  
+<form class="checkbox-list">
+    <input type="text" name="mealDays"> day(s)
+</form>
+ <div class="form-group"> 
   <label  for="comments" style="font-family: Tahoma; margin-top: 20px;font-weight: bold; color: rgb(227, 74, 143);">Other details:</label><br>
   <textarea id="comments" name="comments" rows="15" cols="35" placeholder="Note down any additional information here:" style="
       font-family: Arial;
@@ -247,8 +239,7 @@
       margin-top: 20px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     "></textarea>
-</div>
- </div>
+</div> 
 </section>
 <br>
 <br>
@@ -281,7 +272,7 @@
 $41-$50
   </label><br>
   <input type="checkbox" name="time" value="$51-$60">
-    $51-$60"
+    $51-$60
   </label><br>
   <input type="checkbox" name="time" value="$61-$70">
   $61-$70
@@ -293,7 +284,7 @@ $41-$50
   $81-$90
   </label><br>
   <input type="checkbox" name="time" value="$91-$100">
-    $91-$100"
+    $91-$100
   </label><br>
   <input type="checkbox" name="time" value="$100+">
     $100+
