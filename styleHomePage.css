@@ -3,10 +3,12 @@
     padding: 0;
 }
 
+/* <img src="carrotcursor.png" style="width: 32px; height: 32px;"> */
 
 body {
-  cursor: url('cursor.png'), auto;
+  cursor: url("./Images/cursor.cur"), auto; /* 'auto' is a fallback */
 }
+
 
 .header{
     min-height: 100vh;
