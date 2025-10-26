@@ -2,7 +2,7 @@
 
 <html>
 <head>
-    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Pink Carrots Budgeter  </title>
     <link rel="stylesheet" href = "styleHomePage.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -453,11 +453,15 @@ Chili flakes
 <br>
 <br>
 <section>
-  <form action="submit_page.html" method="post" style="text-align: center;">
-    <button type="submit">SUBMIT</button>
-  </form>
+    <button type="submit" onclick="onSubmit()">SUBMIT</button>
 </section>
 <br>
 <br>
 </body>
+
+<script>
+    function onSubmit() {
+        window.location.href = "submit_page.html";
+    }
+</script>
 </html>

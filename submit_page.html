@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href = "styleHomePage.css">
+    
+    <title>Recipes</title>
+</head>
+<body>
+    <section id="header">
+        <nav>
+            <a href = "index.html"><img src="Images/CarrotMascot .png"></a>
+            <img src="Images/ProjectName.png"></a>
+            <div class ="nav-links" id="navLinks">
+
+                <i class="fa fa-window-close"></i>
+                <i class="fa fa-bars" onclick="hideMenu()"></i>
+
+                <ul>
+                    <li><a href = "index.html" >HOME</a></li>
+                    <li><a href = "game.html" >CHOP CARROTS</a></li>
+                    <li><a href = "recipe.html">SHOP CARROTS</a></li>
+                    <li><a href = "contact.html" >CONTACT</a></li>
+                </ul>
+
+            </div>
+
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+    </section>
+    <button onclick="loadData()">Load Random Recipe Data</button>
+
+</body>
+
+<script>
+    function loadData(){
+        var recipeData = {};
+        fetch('https://www.themealdb.com/api/json/v1/1/random.php')
+            .then(response => response.json())
+            .then(data => {
+                recipeData = data;
+                recipeData.meals.forEach(element => {
+                    console.log(element.strMealThumb);
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+    }
+</script>
+</html>

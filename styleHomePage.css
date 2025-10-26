@@ -55,7 +55,7 @@ nav img:nth-child(2){
 
 /* Default link style */
 .nav-links ul li a {
-  color: #f59ee9;
+  color: #fabcb9;
   font-family: 'Tahoma', sans-serif;
   font-weight: bold;
   -webkit-text-stroke: 2px rgb(227, 74, 143);
@@ -180,6 +180,7 @@ nav img:nth-child(2){
 
 nav .fa{
     display: none;
+    color: #e34a8f;
 }
 
 @media(max-width: 700px){
@@ -238,6 +239,4 @@ body {
     text-align: center;
 }
 
-div .form-group {
-  
-}
+div .form-group {}
